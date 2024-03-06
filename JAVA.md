@@ -3,7 +3,7 @@
 #### *github: [Anx0Fdez](https://github.com/Anx0Fdez)*
 
 ---
-## *Ecritura y lectura de ficheros*
+## *Escritura y lectura de ficheros*
 ### `Escritura`
 
 ### `Lectura`
