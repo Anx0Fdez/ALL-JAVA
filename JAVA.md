@@ -11,20 +11,18 @@
 
 
 ## *Genéricos*
+*Te permite engloar todos los tipos de datos mediante el dato genérico `T`*
 ```java
 public class Box<T> {
-    private T t;[Programación](DAM%2FProgramaci%F3n)
-
+    private T t;
     public void set(T t) {
         this.t = t;
     }
-
     public T get() {
         return t;
     }
 }
 ```
-
 
 ## *Colecciones*
 ### `HashSet`
@@ -62,20 +60,22 @@ map.put("England", "London");
 
 
 ## *ArrayList*
+*Es una lista que almacena objetos o tipos de datos primitivos.*
 ```java
-ArrayList<String> list = new ArrayList<String>();
-list.add("Mango");
-list.add("Apple");
-list.add("Banana");
+Coche audi = new Coche("Audi", "A3", 2000);
+Coche mercedes = new Coche("Mercedes", "Clase A", 2000);
+
+ArrayList<Coche> list = new ArrayList<>();
+list.add(audi);
+list.add(mercedes);
 ```
 ## *For each*
+*El bucle for-each se utiliza para recorrer una colección de elementos.*
 ```java
 for (String fruit : list) {
     System.out.println(fruit);
 }
 ```
-
-
 ## *Interfaces*
 `Una interfaz es una colección de métodos abstractos. Una clase implementa una interfaz, lo que significa que la clase proporciona una implementación para todos los métodos definidos en la interfaz.`
 ## *Clases abstractas*
@@ -95,47 +95,54 @@ try {
 ## *Arrays*
 ### *Array*
 ```java
+//array de 5 elementos
 int[] a = new int[5];
+//array de 5 elementos inicializado
 int[] b = {1, 2, 3, 4, 5};
+
+//introducir un valor en un array
+a[0] = 1;
+a[1] = 21;
+a[2] = 13;
 ```
 ### *Array multidimensional*
 ```java
+//array de 5 elementos
 int[][] a = new int[2][3];
+//array de 5 elementos inicializado
 int[][] b = {{1, 2, 3}, {4, 5, 6}};
+//introducir un valor en un array
+a[0][0] = 1;
+a[0][1] = 2;
+a[0][2] = 3;
 ```
 ---
-
----
-#### *Recorrer un array*
+### `Recorrer un array`
 ```java
 for (int i = 0; i < a.length; i++) {
     System.out.println(a[i]);
 }
 ```
-#### *Ordenar un array*
+### `Ordenar un array`
 ```java
 Arrays.sort(a);
 ```
-#### *Buscar un elemento en un array*
+### `Buscar un elemento en un array`
 ```java
-Arrays.binarySearch(a, 3);
+Arrays.binarySearch(3);
 ```
-
 ---
-
-
 ## *Extends*
 ```java
-//con extends se hereda de la clase Vehicle
 public class Car extends Vehicle {
-    // ...
-    //con super se llama al constructor de la clase padre
-    super(a, b);
+    private int espejos;
+    // constructor con super
+    public Car(String color, int maxSpeed, int espejos) {
+        super(color, maxSpeed);
+        this.espejos = espejos;
+    }
 }
 ```
-
-
-
 ## *MODIFICADORES DE ACCESO*
 ### `public` *El acceso a la clase, método o variable es ilimitado.*
 ### `private` *El acceso a la clase, método o variable es limitado.*
@@ -144,14 +151,17 @@ public class Car extends Vehicle {
 
 ## *Constructor*
 ### Constructor por defecto
+- *Se utiliza para llamar metodos o atributos de la clase*
 ```java
+//
 public class Car {
     public Car() {
-        System.out.println("Car is created");
     }
 }
 ```
 ### Constructor con parametrizado
+- *Sirve crear un objeto con parametros o atributos*
+- *Se utiliza para crear objetos*
 ```java
 public class Car {
     private String color;
@@ -197,6 +207,7 @@ if (a > b) {
 }
 ```
 ###  `Switch`
+- *El valor que va despues del case es le valor que tenemos que meter por teclado para que se ejecute*
 ```java
 switch (a) {
     case 1:
@@ -211,14 +222,18 @@ switch (a) {
 }
 ```
 ##  *Bucles*
-### `while`
+### `while` Mientras se cumpla la condición  (true/false)
+- *No se ejecuta si la condición es falsa*
+- *Se ejecuta 0 o más veces*
 ```java
 while (int a = 0, a < 10) {
     System.out.println(a);
     a++;
 }
 ```
-### `do while`
+### `do while` Haz esto mientras se cumpla la condición (true/false)
+- *Se ejecuta al menos una vez*
+- *Se ejecuta 1 o más veces*
 ```java
 do {
     System.out.println(a);
@@ -226,6 +241,7 @@ do {
 } while (a < 10);
 ```
 ### `for`
+- *El bucle for se ejecuta un número específico de veces establecido en el limite*
 ```java
 for (int a = 0; a < 10; a++) {
     System.out.println(a);
