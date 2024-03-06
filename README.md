@@ -12,4 +12,4 @@ Este repositorio está diseñado como una fuente central para aprender y revisar
 ¡Esperamos que encuentres estos recursos útiles en tu viaje de aprendizaje!
 
 
-## [**Java**](APUNTES JAVA\JAVA.md)
+## [**Java**](JAVA.md)
