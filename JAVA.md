@@ -1,9 +1,8 @@
 # ***JAVA PARA IMBECILES***
-*by: [Anxo Fdez]*
+### *by: [Anxo Fdez]*
+#### *github: [Anx0Fdez](https://github.com/Anx0Fdez)*
 
-*github: [Anx0Fdez](https://github.com/Anx0Fdez)*
-
-
+---
 ## *Ecritura y lectura de ficheros*
 ### `Escritura`
 
