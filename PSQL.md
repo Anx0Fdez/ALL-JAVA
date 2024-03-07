@@ -22,7 +22,7 @@ pslq postgres
 
 ## *Estrucuturas básicas*
 ### `PROCEDIMIENTOS`
-```postgresql
+```sql
 create or replace procedure /*ptimpidep*/(/*vnum_persoa varchar*/)
 language plpgsql as $$
 
@@ -33,12 +33,12 @@ begin
 end;$$
 ```
 #### <u>*Lanzamiento de Procedimientos*</u>
-```postgresql
+```sql
 call /*ptimpidep*/(/*Jose*/);
 ```
 
 ### `TRIGGERS`
-```postgresql
+```sql
 drop trigger if exists /*timpidep*/ on /*a1c*/;
 
 create or replace function /*ftimpidep*/() returns trigger 
@@ -54,12 +54,12 @@ end;$$
 create trigger /*timpidep*/ before insert on /*a1c*/ for each row execute procedure /*ftimpidep*/()
 ```
 #### <u>*Lanzamiento de Triggers*</u>
-```postgresql
+```sql
 insert into /*a1c*/ values (/*1, 2, 3, 4, 5, 6, 7, 8, 9, 10*/);
 ```
 
 ### `FUNCIONES`
-```postgresql
+```sql
 
 ```
 
