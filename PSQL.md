@@ -27,9 +27,11 @@ create or replace procedure /*ptimpidep*/(/*vnum_persoa varchar*/)
 language plpgsql as $$
 
 declare
-
+r varchar = '';
+       
 begin
 
+raise notice '%', r;
 end;$$
 ```
 #### <u>*Lanzamiento de Procedimientos*</u>
@@ -62,6 +64,40 @@ insert into /*a1c*/ values (/*1, 2, 3, 4, 5, 6, 7, 8, 9, 10*/);
 ```sql
 
 ```
+#### <u>*Lanzamiento de Triggers*</u>
+```sql
+```
+
+## *IMPRIMIR* 
+### *VARIABLE `r`*  
+- `E'\n';` para salto de línea
+- `||` para concatenar
+```sql
+declare
+r varchar = '';
+begin
+r = r || c.cod_posto || E'\n';
+raise notice '%', r;
+end;
+```
+### *SIN VARIABLES `RAISE NOTICE`*
+- La cantidad de `%` debe coincidir con la cantidad de valores que se quieren imprimir. ''
+```sql
+raise notice 'entrevistador: % % %', c.nome, c.apel1, c.apel2;
+```
+
+## *EXCEPTIONS*
+```sql
+if /*conta*/ = 1 then
+raise exception 'Error de insercion';
+else
+raise notice 'aceptada insercion';
+end if;
+```
+
+
+ 
+
 
 
 
