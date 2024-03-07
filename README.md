@@ -12,7 +12,7 @@ Este repositorio está diseñado como una fuente central para aprender y revisar
 ¡Esperamos que encuentres estos recursos útiles en tu viaje de aprendizaje!
 
 
-## [**Java**](JAVA.md) // [**PSQL**]() // [**Bash**]()
+## [**Java**](JAVA.md) // [**PSQL**](PSQL.md) // [**Bash**]()
 
 
 
